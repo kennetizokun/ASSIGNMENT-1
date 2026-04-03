@@ -1,23 +1,30 @@
-import React from "react";
-import ContactCard from "./components/ContactCard";
-import Header from "./components/Header";
-import BookList from "./components/BookList";
+import React, { Suspense } from "react";
 
-function App() {
-  return (
-    <>
+import { BookList, Header } from "./components/index";
+
+const ContactCard = React.lazy(() => import("./components/ContactCard"));
+
+const App = () => (
+  
+    
       <div className="container">
-        <ContactCard
-          name="Sunita Kumar"
-          job="Electrical Engineer"
-          email="sunita.kumar@acme.co"
-        />
+        <Suspense fallback= {<div>loading...</div>}>
+        
+          <ContactCard
+            name="Sunita Kumar"
+            job="Electrical Engineer"
+            email="sunita.kumar@acme.co"
+          />
+          </Suspense>
+        
 
         <Header />
+        
         <BookList />
+        
       </div>
-    </>
+    
   );
-}
+
 
 export default App;

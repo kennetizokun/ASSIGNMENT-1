@@ -1,8 +1,9 @@
 import React from "react";
-import "./Book.css";
+import "../assets/Book.css";
 
-function Book(props) {
-  return <li className="book">{props.title}</li>;
-}
+
+const Book = (props) => (
+   <li className="book">{props.title}</li>
+)
 
 export default Book;

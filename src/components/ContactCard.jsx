@@ -1,8 +1,8 @@
-import React from "react";
-import "./ContactCard.css";
+import React, { lazy } from "react";
+import "../assets/ContactCard.css";
 
-function ContactCard(props) {
-  return (
+const ContactCard = (props) => (
+  
     <li className="contact-card">
       <h2>{props.name}</h2>
       <dl>
@@ -13,6 +13,6 @@ function ContactCard(props) {
       </dl>
     </li>
   );
-}
+
 
 export default ContactCard;

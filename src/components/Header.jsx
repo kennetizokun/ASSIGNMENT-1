@@ -1,7 +1,6 @@
 import React from "react";
-import "./Book.css";
+import "../assets/Book.css";
 
-function Header() {
-  return <h3 className="header">My Favorite Books</h3>;
-}
+const Header = () => (<h3 className="header">My Favorite Books</h3>
+)
 export default Header;
